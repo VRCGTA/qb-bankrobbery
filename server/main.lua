@@ -165,6 +165,8 @@ RegisterNetEvent('qb-bankrobbery:server:recieveItem', function(type, bankId, loc
     local src = source
     local ply = QBCore.Functions.GetPlayer(src)
     if not ply then return end
+    print('qb-bankrobbery:server:recieveItem')
+    print(lockerId)
     if type == "small" then
         if #(GetEntityCoords(GetPlayerPed(src)) - Config.SmallBanks[bankId]["lockers"][lockerId]["coords"]) > 2.5 then
             return error(Lang:t("error.event_trigger_wrong", {event = "qb-bankrobbery:server:receiveItem", extraInfo = " (smallbank "..bankId..") ", source = source}))

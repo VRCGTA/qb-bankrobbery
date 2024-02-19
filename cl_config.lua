@@ -1,6 +1,6 @@
 Config = Config or {}
 
-Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
+Config.UseTarget = true -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 
 -- This is the handler for the cop count, you can change this to anything you want as this is by default the qb-policejob event
 RegisterNetEvent('police:SetCopCount', function(amount)
@@ -62,8 +62,8 @@ function Config.ShowRequiredItems(items, show)
     TriggerEvent('inventory:client:requiredItems', items, show)
 end
 
-Config.MinimumPaletoPolice = 8
-Config.MinimumPacificPolice = 8
+Config.MinimumPaletoPolice = 4
+Config.MinimumPacificPolice = 6
 Config.MinimumFleecaPolice = 8
-Config.MinimumThermitePolice = 6
+Config.MinimumThermitePolice = 2
 Config.OutlawCooldown = 5 -- The amount of minutes it takes for the cops to be able to be called again after they were called
