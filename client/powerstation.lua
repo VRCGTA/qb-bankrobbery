@@ -156,7 +156,7 @@ CreateThread(function()
             heading = 90.0,
             minZ = Config.PowerStations[k].coords.z - 1,
             maxZ = Config.PowerStations[k].coords.z + 1,
-            debugPoly = false
+            debugPoly = true
         })
         stationZone:onPlayerInOut(function(inside)
             if inside and not Config.PowerStations[k].hit then

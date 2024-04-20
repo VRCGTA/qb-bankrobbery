@@ -65,7 +65,7 @@ CreateThread(function()
         heading = Config.BigBanks["paleto"]["coords"].closed,
         minZ = Config.BigBanks["paleto"]["coords"].z - 1,
         maxZ = Config.BigBanks["paleto"]["coords"].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     bankCardAZone:onPlayerInOut(function(inside)
         inBankCardAZone = inside
@@ -84,7 +84,7 @@ CreateThread(function()
         heading = Config.BigBanks["paleto"]["heading"].closed,
         minZ = Config.BigBanks["paleto"]["thermite"][1]["coords"].z - 1,
         maxZ = Config.BigBanks["paleto"]["thermite"][1]["coords"].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     thermite1Zone:onPlayerInOut(function(inside)
         if inside and not Config.BigBanks["paleto"]["thermite"][1]["isOpened"] then
@@ -108,7 +108,7 @@ CreateThread(function()
                 heading = Config.BigBanks["paleto"]["heading"].closed,
                 minZ = Config.BigBanks["paleto"]["lockers"][k]["coords"].z - 1,
                 maxZ = Config.BigBanks["paleto"]["lockers"][k]["coords"].z + 1,
-                debugPoly = false
+                debugPoly = true
             }, {
                 options = {
                     {
@@ -130,7 +130,7 @@ CreateThread(function()
                 heading = Config.BigBanks["paleto"]["heading"].closed,
                 minZ = Config.BigBanks["paleto"]["lockers"][k]["coords"].z - 1,
                 maxZ = Config.BigBanks["paleto"]["lockers"][k]["coords"].z + 1,
-                debugPoly = false
+                debugPoly = true
             })
             lockerZone:onPlayerInOut(function(inside)
                 if inside and not IsDrilling and Config.BigBanks["paleto"]["isOpened"] and not Config.BigBanks["paleto"]["lockers"][k]["isBusy"] and not Config.BigBanks["paleto"]["lockers"][k]["isOpened"] then

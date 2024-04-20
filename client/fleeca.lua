@@ -433,7 +433,7 @@ CreateThread(function()
             heading = Config.SmallBanks[i]["coords"].closed,
             minZ = Config.SmallBanks[i]["coords"].z - 1,
             maxZ = Config.SmallBanks[i]["coords"].z + 1,
-            debugPoly = false
+            debugPoly = true
         })
         bankZone:onPlayerInOut(function(inside)
             inElectronickitZone = inside
@@ -456,7 +456,7 @@ CreateThread(function()
                     heading = Config.SmallBanks[i]["heading"].closed,
                     minZ = Config.SmallBanks[i]["lockers"][k]["coords"].z - 1,
                     maxZ = Config.SmallBanks[i]["lockers"][k]["coords"].z + 1,
-                    debugPoly = false
+                    debugPoly = true
                 }, {
                     options = {
                         {
@@ -478,7 +478,7 @@ CreateThread(function()
                     heading = Config.SmallBanks[i]["heading"].closed,
                     minZ = Config.SmallBanks[i]["lockers"][k]["coords"].z - 1,
                     maxZ = Config.SmallBanks[i]["lockers"][k]["coords"].z + 1,
-                    debugPoly = false
+                    debugPoly = true
                 })
                 lockerZone:onPlayerInOut(function(inside)
                     if inside and closestBank ~= 0 and not IsDrilling and Config.SmallBanks[i]["isOpened"] and not Config.SmallBanks[i]["lockers"][k]["isOpened"] and not Config.SmallBanks[i]["lockers"][k]["isBusy"] then

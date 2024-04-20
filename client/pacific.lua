@@ -114,7 +114,7 @@ CreateThread(function()
         heading = Config.BigBanks["pacific"]["heading"].closed,
         minZ = Config.BigBanks["pacific"]["coords"][1].z - 1,
         maxZ = Config.BigBanks["pacific"]["coords"][1].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     bankCardBZone:onPlayerInOut(function(inside)
         inBankCardBZone = inside
@@ -133,7 +133,7 @@ CreateThread(function()
         heading = Config.BigBanks["pacific"]["heading"].closed,
         minZ = Config.BigBanks["pacific"]["coords"][2].z - 1,
         maxZ = Config.BigBanks["pacific"]["coords"][2].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     electronickitZone:onPlayerInOut(function(inside)
         inElectronickitZone = inside
@@ -154,7 +154,7 @@ CreateThread(function()
         heading = Config.BigBanks["pacific"]["heading"].closed,
         minZ = Config.BigBanks["pacific"]["thermite"][1]["coords"].z - 1,
         maxZ = Config.BigBanks["pacific"]["thermite"][1]["coords"].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     thermite1Zone:onPlayerInOut(function(inside)
         if inside and not Config.BigBanks["pacific"]["thermite"][1]["isOpened"] then
@@ -176,7 +176,7 @@ CreateThread(function()
         heading = Config.BigBanks["pacific"]["heading"].closed,
         minZ = Config.BigBanks["pacific"]["thermite"][2]["coords"].z - 1,
         maxZ = Config.BigBanks["pacific"]["thermite"][2]["coords"].z + 1,
-        debugPoly = false
+        debugPoly = true
     })
     thermite2Zone:onPlayerInOut(function(inside)
         if inside and not Config.BigBanks["pacific"]["thermite"][2]["isOpened"] then
@@ -200,7 +200,7 @@ CreateThread(function()
                 heading = Config.BigBanks["pacific"]["heading"].closed,
                 minZ = Config.BigBanks["pacific"]["lockers"][k]["coords"].z - 1,
                 maxZ = Config.BigBanks["pacific"]["lockers"][k]["coords"].z + 1,
-                debugPoly = false
+                debugPoly = true
             }, {
                 options = {
                     {
@@ -222,7 +222,7 @@ CreateThread(function()
                 heading = Config.BigBanks["pacific"]["heading"].closed,
                 minZ = Config.BigBanks["pacific"]["lockers"][k]["coords"].z - 1,
                 maxZ = Config.BigBanks["pacific"]["lockers"][k]["coords"].z + 1,
-                debugPoly = false
+                debugPoly = true
             })
             lockerZone:onPlayerInOut(function(inside)
                 if inside and not IsDrilling and Config.BigBanks["pacific"]["isOpened"] and not Config.BigBanks["pacific"]["lockers"][k]["isBusy"] and not Config.BigBanks["pacific"]["lockers"][k]["isOpened"] then

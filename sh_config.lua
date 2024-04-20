@@ -420,42 +420,42 @@ Config.BigBanks = {
         ["isOpened"] = false,
         ["lockers"] = {
             [1] = {
-                ["coords"] = vector3(-98.49, 6461.96, 31.63),
+                ["coords"] = vector3(-98.49, 6461.96, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [2] = {
-                ["coords"] = vector3(-99.03, 6461.3, 31.63),
+                ["coords"] = vector3(-99.03, 6461.3, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [3] = {
-                ["coords"] = vector3(-100.27, 6460.3, 31.63),
+                ["coords"] = vector3(-100.27, 6460.3, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [4] = {
-                ["coords"] = vector3(-97.79, 6459.49, 31.63),
+                ["coords"] = vector3(-97.79, 6459.49, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [5] = {
-                ["coords"] = vector3(-96.68, 6459.9, 31.63),
+                ["coords"] = vector3(-96.68, 6459.9, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [6] = {
-                ["coords"] = vector3(-96.24, 6462.52, 31.63),
+                ["coords"] = vector3(-96.24, 6462.52, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [7] = {
-                ["coords"] = vector3(-97.27, 6463.57, 31.63),
+                ["coords"] = vector3(-97.27, 6463.57, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             },
             [8] = {
-                ["coords"] = vector3(-98.44, 6464.05, 31.63),
+                ["coords"] = vector3(-98.44, 6464.05, 30.63),
                 ["isBusy"] = false,
                 ["isOpened"] = false
             }
