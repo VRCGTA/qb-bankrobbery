@@ -23,7 +23,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankcardA', function()
     if not inBankCardAZone then return end
     QBCore.Functions.TriggerCallback('qb-bankrobbery:server:isRobberyActive', function(isBusy)
         if not isBusy then
-            if CurrentCops >= Config.MinimumPaletoPolice then
+            if CurrentCops >= Config.GetMinimumPaletoPolice() then
                 if not Config.BigBanks["paleto"]["isOpened"] then
                     Config.ShowRequiredItems(nil, false)
                     loadAnimDict("anim@gangops@facility@servers@")
@@ -49,7 +49,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankcardA', function()
                     QBCore.Functions.Notify(Lang:t("error.bank_already_open"), "error")
                 end
             else
-                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.MinimumPaletoPolice}), "error")
+                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.GetMinimumPaletoPolice()}), "error")
             end
         else
             QBCore.Functions.Notify(Lang:t("error.security_lock_active"), "error", 5500)
@@ -155,10 +155,10 @@ CreateThread(function()
                         exports['qb-core']:KeyPressed()
                         Wait(500)
                         exports['qb-core']:HideText()
-                        if CurrentCops >= Config.MinimumPaletoPolice then
+                        if CurrentCops >= Config.GetMinimumPaletoPolice() then
                             openLocker("paleto", currentLocker)
                         else
-                            QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.MinimumPaletoPolice}), "error")
+                            QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.GetMinimumPaletoPolice()}), "error")
                         end
                         sleep = 1000
                     end

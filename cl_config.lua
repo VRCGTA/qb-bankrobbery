@@ -52,9 +52,16 @@ function Config.ShowRequiredItems(items, show)
     TriggerEvent('inventory:client:requiredItems', items, show)
 end
 
-
-Config.MinimumPaletoPolice = exports['vrcgta-qb']:GetValue('MinimumPaletoPolice')
-Config.MinimumPacificPolice = exports['vrcgta-qb']:GetValue('MinimumPacificPolice')
-Config.MinimumFleecaPolice = exports['vrcgta-qb']:GetValue('MinimumFleecaPolice')
-Config.MinimumThermitePolice = exports['vrcgta-qb']:GetValue('MinimumThermitePolice')
+function Config.GetMinimumPaletoPolice()
+    return GetConvarInt("vrcgta:bankrobbery:minimumPaletoPolice", 999)
+end
+function Config.GetMinimumPacificPolice()
+    return GetConvarInt("vrcgta:bankrobbery:minimumPacificPolice", 999)
+end
+function Config.GetMinimumFleecaPolice()
+    return GetConvarInt("vrcgta:bankrobbery:minimumFleecaPolice", 999)
+end
+function Config.GetMinimumThermitePolice()
+    return GetConvarInt("vrcgta:bankrobbery:minimumThermitePolice", 999)
+end
 Config.OutlawCooldown = 5 -- The amount of minutes it takes for the cops to be able to be called again after they were called

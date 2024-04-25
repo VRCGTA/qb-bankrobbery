@@ -242,7 +242,7 @@ RegisterNetEvent('electronickit:UseElectronickit', function()
     if closestBank == 0 or not inElectronickitZone then return end
     QBCore.Functions.TriggerCallback('qb-bankrobbery:server:isRobberyActive', function(isBusy)
         if not isBusy then
-            if CurrentCops >= Config.MinimumFleecaPolice then
+            if CurrentCops >= Config.GetMinimumFleecaPolice() then
                 if not Config.SmallBanks[closestBank]["isOpened"] then
                     local hasItem = Config.HasItem({"trojan_usb", "electronickit"})
                     if hasItem then
@@ -279,7 +279,7 @@ RegisterNetEvent('electronickit:UseElectronickit', function()
                     QBCore.Functions.Notify(Lang:t("error.bank_already_open"), "error")
                 end
             else
-                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.MinimumFleecaPolice}), "error")
+                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.GetMinimumFleecaPolice()}), "error")
             end
         else
             QBCore.Functions.Notify(Lang:t("error.security_lock_active"), "error", 5500)
@@ -505,10 +505,10 @@ CreateThread(function()
                             exports['qb-core']:KeyPressed()
                             Wait(500)
                             exports['qb-core']:HideText()
-                            if CurrentCops >= Config.MinimumFleecaPolice then
+                            if CurrentCops >= Config.GetMinimumFleecaPolice() then
                                 openLocker(closestBank, currentLocker)
                             else
-                                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.MinimumFleecaPolice}), "error")
+                                QBCore.Functions.Notify(Lang:t("error.minimum_police_required", {police = Config.GetMinimumFleecaPolice()}), "error")
                             end
                             sleep = 1000
                         end

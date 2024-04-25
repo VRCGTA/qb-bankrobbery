@@ -56,7 +56,7 @@ RegisterNetEvent('thermite:UseThermite', function()
         Config.OnEvidence(pos, 85)
         local dist = #(pos - Config.PowerStations[closestStation].coords)
         if dist < 1.5 then
-            if CurrentCops >= Config.MinimumThermitePolice then
+            if CurrentCops >= Config.GetMinimumThermitePolice() then
                 if not Config.PowerStations[closestStation].hit then
                     loadAnimDict("weapon@w_sp_jerrycan")
                     TaskPlayAnim(PlayerPedId(), "weapon@w_sp_jerrycan", "fire", 3.0, 3.9, 180, 49, 0, 0, 0, 0)
@@ -71,12 +71,12 @@ RegisterNetEvent('thermite:UseThermite', function()
                     QBCore.Functions.Notify(Lang:t("error.fuses_already_blown"), "error")
                 end
             else
-                QBCore.Functions.Notify(Lang:t("error.minium_police_required", {police = Config.MinimumThermitePolice}), "error")
+                QBCore.Functions.Notify(Lang:t("error.minium_police_required", {police = Config.GetMinimumThermitePolice()}), "error")
             end
         end
     elseif currentThermiteGate ~= 0 then
         Config.OnEvidence(pos, 85)
-        if CurrentCops >= Config.MinimumThermitePolice then
+        if CurrentCops >= Config.GetMinimumThermitePolice() then
             currentGate = currentThermiteGate
             loadAnimDict("weapon@w_sp_jerrycan")
             TaskPlayAnim(PlayerPedId(), "weapon@w_sp_jerrycan", "fire", 3.0, 3.9, -1, 49, 0, 0, 0, 0)
@@ -87,7 +87,7 @@ RegisterNetEvent('thermite:UseThermite', function()
                 amount = math.random(3, 5),
             })
         else
-            QBCore.Functions.Notify(Lang:t("error.minium_police_required", {police = Config.MinimumThermitePolice}), "error")
+            QBCore.Functions.Notify(Lang:t("error.minium_police_required", {police = Config.GetMinimumThermitePolice()}), "error")
         end
     end
 end)
